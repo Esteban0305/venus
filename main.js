@@ -22,3 +22,16 @@ function updateCountdown() {
 const timer = setInterval(updateCountdown, 50);
 // updateProgressBar();
 updateCountdown();
+
+function setVenus() {
+    console.log(screen.availWidth)
+    const x = Math.floor(Math.random() * screen.availWidth) - 20
+    const y = Math.floor(Math.random() * 80) + 20
+
+    console.log(x, y)
+
+    document.getElementById('venus').style.left = `${x}px`
+    document.getElementById('venus').style.top = `${y}px`
+}
+
+setVenus()
