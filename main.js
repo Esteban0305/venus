@@ -29,6 +29,12 @@ function updateCountdown() {
     // ${Math.floor(seconds / 60 / 60) % 24}:${Math.floor(seconds / 60) % 60}  ${Math.floor(seconds) % 60}
 }
 
+function startBirdie() {
+    document.getElementById('birdie').style.display = 'flex';
+    const song = document.getElementById('audioBirdie');
+    song.play();
+}
+
 function setStars() {
     const stars = document.getElementById('stars');
     for (let i = 0; i < 100; i++) {
@@ -44,10 +50,15 @@ function setStars() {
     venus.className = 'star';
     venus.classList.add('venus');
     venus.style.left = `${Math.floor(Math.random() * 100)}%`;
+    console.log(venus.style);
+    if (parseInt(venus.style.left) > 80) {
+        venus.classList.add('venusBefore');
+    }
     venus.style.top = `${Math.floor(Math.random() * 10) + 5}%`;
     venus.style.animationDuration = `0s`;
     venus.style.width = '10px';
     venus.style.height = '10px';
+    venus.onclick = startBirdie;
     stars.appendChild(venus);
 }
 

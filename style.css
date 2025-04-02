@@ -34,6 +34,41 @@ body {
 .venus {
   box-shadow: 0 0 10px 2px  #f5f5f5;
   background-color: #fff;
+  cursor: pointer;
+}
+
+.venus::before {
+  content: 'Toca para una sorpresa';
+  color: #ffffff;
+  font-size: x-small;
+  position: absolute;
+  right: -125px;
+  top: -2px;
+}
+
+.venusBefore::before {
+  right: 15px;
+  width: 120px;
+}
+
+#birdie {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, black, transparent);
+}
+
+#birdie img {
+  height: 50px;
+}
+
+#birdie h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  margin-top: auto;
 }
 
 @keyframes twinkle {
