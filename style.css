@@ -1,68 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
+  flex-direction: column;
+  min-height: 100dvh;
   margin: 0;
-  background: #02001a;
   color: #f5f5f5;
-  text-align: center;
-}
-h2 {
-  font-size: 2.5rem;
+  background: radial-gradient(circle at bottom, #0b3d91, #000);
+  overflow-x: hidden;
 }
 
-p {
-  width: 80%;
-  max-width: 960px;
-  margin: auto;
-  margin-top: 10px;
-}
-#countdown {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-#progress {
-  width: 100%;
-  height: 20px;
-  background: #333;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-#venus {
-  min-width: 20px;
-  min-height: 20px;
-  background: radial-gradient(circle, #f8c471, #ff5733);
-  border-radius: 50%;
-  box-shadow: 0 0 10px #f8c471;
+.stars {
   position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
 
-  animation: twinkle 2s infinite alternate;
+.star {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  animation: twinkle infinite ease-in-out;
+}
+
+.venus {
+  box-shadow: 0 0 10px 2px  #f5f5f5;
+  background-color: #fff;
 }
 
 @keyframes twinkle {
   0% {
-      box-shadow: 0 0 20px #f8c471;
-      transform: scale(1);
+    opacity: 0.3;
+    box-shadow: #ffffff00 0 0 3px;
   }
   20% {
-      box-shadow: 0 0 40px #ff5733;
-      transform: scale(1.1);
+    opacity: 0.7;
+    box-shadow: #ffffff 0 0 3px;
   }
   30% {
-      box-shadow: 0 0 20px #f8c471;
-      transform: scale(1);
+    opacity: 0.7;
+    box-shadow: #ffffff00 0 0 3px;
   }
-  70% {
-      box-shadow: 0 0 20px #f8c471;
-      transform: scale(1.1);
+  31% {
+    opacity: 1;
+    box-shadow: #ffffff00 0 0 3px;
   }
   100% {
-      box-shadow: 0 0 20px #f8c471;
-      transform: scale(1);
+    opacity: 0.3;
+    box-shadow: #ffffff00 0 0 3px;
   }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+header h2 {
+  font-family: "Boldonse", system-ui;
+  text-transform: uppercase;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.countdown_container {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+.countdown_container :first-child {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+.countdown_container :last-child {
+  margin-bottom: auto;
+}
+
+.countdown_container table td {
+  width: 50%;
+  font-weight: 500;
+}
+
+.countdown_container h1 {
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
 }
