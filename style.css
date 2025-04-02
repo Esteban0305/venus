@@ -76,7 +76,7 @@ header h2 {
   height: 100dvh;
   display: flex;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 .countdown_container :first-child {
