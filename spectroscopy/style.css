@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+  position: absolute;
+  top: 0;
+}
+
+#venus {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  align-items: center;
+}
+
+#planet {
+  margin: auto;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, 
+    #e6b566, #d6a25a, #c8953f, #b5781d, #9e6112);
+  background-blend-mode: overlay;
+  box-shadow:
+    inset -20px -20px 60px rgba(0, 0, 0, 0.3),
+    inset 30px 30px 60px rgba(255, 255, 255, 0.05);
+  filter: blur(0.5px);
+  position: relative;
+}
+
+/* Simulación de atmósfera turbia */
+#planet::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 100px 10px #e6b566, 0 0 100px 10px #fff;
+}
+
+#more {
+  position: absolute;
+  bottom: 50px;
+}
+
+#letter {
+  padding: 20px 30px;
+  margin-top: 50px;
+}
+
+#letter > * {
+  margin-bottom: 10px;
+}
